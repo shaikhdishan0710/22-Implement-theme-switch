@@ -1,0 +1,60 @@
+/* Light Theme */
+body[data-theme="light"] {
+  --bg: #f4f6fa;
+  --text: #111;
+  --card: #ffffff;
+}
+
+/* Dark Theme */
+body[data-theme="dark"] {
+  --bg: #0f172a;
+  --text: #ffffff;
+  --card: #1e293b;
+}
+
+.dashboard {
+  padding: 20px;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme-btn {
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+/* Cards */
+.cards {
+  margin-top: 20px;
+  display: grid;
+  gap: 15px;
+}
+
+.card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 8px;     
+  text-align: center;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
